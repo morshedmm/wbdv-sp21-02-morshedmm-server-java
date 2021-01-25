@@ -61,11 +61,21 @@
             </label>
             <div class="col-sm-11">
 
-                <select class="form-control" id="roleFld">
+                <select class="custom-select form-control" id="roleFld">
+                    <option selected>Student</option>
                     <option>Faculty</option>
-                    <option>Student</option>
                     <option>Admin</option>
                 </select>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="dobFld" class="col-sm-1 col-from-label">
+                Date Of Birth
+            </label>
+            <div class="col-sm-11">
+                <input type="date" class="form-control"
+                       id="dobFld" placeholder="mm/dd/yyyy">
             </div>
         </div>
 
