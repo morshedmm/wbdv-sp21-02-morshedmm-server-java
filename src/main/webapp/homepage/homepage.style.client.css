@@ -18,3 +18,13 @@
 font-size: large;
 font-weight: bold;
 }
+
+.nav-bar {
+border-top: 1px solid hsl(0, 0%, 66%);
+border-left: 1px solid hsl(0, 0%, 66%);
+border-right: 1px solid hsl(0, 0%, 66%);
+}
+
+.nav-bar-bottom {
+border-bottom: 1px solid hsl(0, 0%, 66%);
+}
