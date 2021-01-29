@@ -1,0 +1,18 @@
+.wbdv-sticky-top {
+    position: fixed;
+    width: 100%;
+    background-color: blue;
+    z-index: 1;
+}
+
+.wbdv-padding-5px {
+    padding: 50px;
+}
+
+.heading-color {
+    color: white;
+}
+
+.add-padding-right {
+    padding-right: 30px;
+}
