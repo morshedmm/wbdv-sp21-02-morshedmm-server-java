@@ -4,8 +4,8 @@
     z-index: 1;
 }
 
-.wbdv-padding-5px {
-    padding: 50px;
+.webdev-padding-5px {
+    padding: 5px;
 }
 
 .heading-color {
@@ -17,7 +17,7 @@
 }
 
 .add-padding-top {
-    padding-top: 0px;
+    padding-top: 15px;
 }
 
 .add-gap-color {
@@ -26,7 +26,7 @@
 }
 
 .nav-bar-bottom {
-border-bottom: 30px solid hsl(0, 0%, 100%);
+border-bottom: 0px solid hsl(0, 0%, 100%);
 }
 
 .add-header-padding-left {
