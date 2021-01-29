@@ -16,3 +16,13 @@
 .add-padding-right {
     padding-right: 30px;
 }
+
+.add-padding-top {
+    padding-top: 25px;
+}
+
+.add-gap-color {
+    height:30px;
+    background-color: blue;
+
+}
