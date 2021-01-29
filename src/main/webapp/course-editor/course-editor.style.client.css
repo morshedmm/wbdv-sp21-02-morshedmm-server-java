@@ -23,9 +23,20 @@
 .add-gap-color {
     height:30px;
     background-color: blue;
-
 }
 
 .nav-bar-bottom {
 border-bottom: 30px solid hsl(0, 0%, 100%);
+}
+
+.add-header-padding-left {
+    padding-left: 20px;
+}
+
+.add-active-color {
+    background-color: Gray;
+}
+
+.add-tab-color {
+    background-color: LightGray;
 }
