@@ -1,7 +1,6 @@
 .wbdv-sticky-top {
     position: fixed;
     width: 100%;
-    background-color: blue;
     z-index: 1;
 }
 
@@ -18,11 +17,15 @@
 }
 
 .add-padding-top {
-    padding-top: 25px;
+    padding-top: 0px;
 }
 
 .add-gap-color {
     height:30px;
     background-color: blue;
 
+}
+
+.nav-bar-bottom {
+border-bottom: 30px solid hsl(0, 0%, 100%);
 }
