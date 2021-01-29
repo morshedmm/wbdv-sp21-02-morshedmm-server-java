@@ -20,6 +20,10 @@
     padding-top: 15px;
 }
 
+.add-padding-bot-10px {
+    padding-bottom: 15px;
+}
+
 .add-gap-color {
     height:30px;
     background-color: blue;
