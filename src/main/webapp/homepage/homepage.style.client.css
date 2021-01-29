@@ -1,3 +1,7 @@
+.color-me-tomato {
+  color: tomato;
+}
+
 .color-me-red {
   color: red;
 }
@@ -12,6 +16,10 @@
 
 .wbdv-padding-5px {
     padding: 7px;
+}
+
+.add-padding-left-icon {
+    padding-left: 1200px;
 }
 
 .table-attr-font {
