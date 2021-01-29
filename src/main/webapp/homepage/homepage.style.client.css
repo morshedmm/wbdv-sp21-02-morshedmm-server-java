@@ -18,21 +18,28 @@
     padding: 7px;
 }
 
-.add-padding-left-icon {
-    padding-left: 1200px;
+.add-padding-left {
+    padding-left: 60px;
 }
 
 .table-attr-font {
-font-size: large;
-font-weight: bold;
+    font-size: large;
+    font-weight: bold;
 }
 
-.nav-bar {
-border-top: 1px solid hsl(0, 0%, 92%);
-border-left: 1px solid hsl(0, 0%, 92%);
-border-right: 1px solid hsl(0, 0%, 92%);
+.nav-bar-top {
+    border-top: 1px solid hsl(0, 0%, 92%);
+
 }
 
 .nav-bar-bottom {
-border-bottom: 1px solid hsl(0, 0%, 92%);
+    border-bottom: 1px solid hsl(0, 0%, 92%);
+}
+
+.nav-bar-right {
+    border-right: 1px solid hsl(0, 0%, 92%);
+}
+
+.nav-bar-left {
+    border-left: 1px solid hsl(0, 0%, 92%);
 }
