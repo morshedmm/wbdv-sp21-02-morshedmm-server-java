@@ -5,7 +5,7 @@
 }
 
 .webdev-padding-5px {
-    padding: 14px;
+    padding: 15px;
 }
 
 .heading-color {
@@ -13,15 +13,19 @@
 }
 
 .add-padding-right {
-    padding-right: 20px;
+    padding-right: 10px;
 }
 
 .add-padding-right-top {
-    padding-right: 28px;
+    padding-right: 10px;
+}
+
+.add-padding-tabs {
+    padding-right: 20px;
 }
 
 .add-padding-top {
-    padding-top: 15px;
+    padding-top: 20px;
 }
 
 .add-padding-bot-10px {
