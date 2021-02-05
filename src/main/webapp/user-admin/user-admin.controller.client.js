@@ -32,7 +32,30 @@ function renderUsers(users) {
 
     theTableBody.empty();
 
-    
+    for(var i = 0; i < users.length(); i++) {
+        var user = users[$i]
+
+        theTableBody.prepend(`
+                <tr class="wbdv-template wbdv-user wbdv-hidden">
+                    <td class="wbdv-username">${user.username}</td>
+                    <td>&nbsp;</td>
+                    <td class="wbdv-first-name">${user.firstname}</td>
+                    <td class="wbdv-last-name">${user.lastname}</td>
+                    <td class="wbdv-role">${user.role}</td>
+                    <td class="wbdv-actions">
+                        <span class="pull-right">
+                            <button>
+                                <i class="fa-2x fa fa-times wbdv-remove"></i>
+                            </button>
+
+                            <button>
+                                <i class="fa-2x fa fa-pencil wbdv-edit"></i>
+                            </button>
+                        </span>
+                    </td>
+                </tr>
+        `)
+    }
 
 
 
