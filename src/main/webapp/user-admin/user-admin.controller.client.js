@@ -30,18 +30,24 @@ function findUserById() { } // optional - might not need this
 
 function main() {
 
-    $createBtn = $(".wbdv-create");
+    $userNameFld = $(".wbdv-username-fld");
+    $passwordFld = $(".wbdv-password-fld");
+    $firstNameFld = $(".wbdv-firstname-fld");
+    $lastNameFld = $(".wbdv-lastname-fld");
+    $roleFld = $(".wbdv-role-fld");
+
+    $createBtn = $(".wbdv-create-user");
 
 
 
     $createBtn.click(() => {
 
         createUser({
-            username:
-            password:
-            firstname:
-            lastname:
-            role:
+            username: $userNameFld.val(),
+            password: $passwordFld.val(),
+            firstname: $firstNameFld.val(),
+            lastname: $lastNameFld.val(),
+            role: $roleFld.val()
 
         })
 
