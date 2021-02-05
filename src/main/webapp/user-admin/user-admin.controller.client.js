@@ -3,8 +3,17 @@ var $removeBtn, $editBtn, $createBtn;
 var $userRowTemplate, $tbody;
 var userService = new AdminUserServiceClient();
 
+var users = [];
+
 
 function createUser() {
+
+    userService.createUser(user)
+        .then (function actualUser {
+            users.push(actualUser)
+            renderUsers(users)
+
+        })
 
 }
 
@@ -20,6 +29,12 @@ function updateUser() {
 }
 
 function renderUsers(users) {
+
+    theTableBody.empty();
+
+    
+
+
 
 }
 
@@ -38,6 +53,8 @@ function main() {
 
     $createBtn = $(".wbdv-create-user");
 
+    theTableBody = jQuery("tbody")
+
 
 
     $createBtn.click(() => {
@@ -50,6 +67,8 @@ function main() {
             role: $roleFld.val()
 
         })
+
+        // WILL remove the filed values afterwards
 
     }
 
