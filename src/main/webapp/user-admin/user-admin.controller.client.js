@@ -17,7 +17,19 @@ function createUser(user) {
 
 }
 
-function deleteUser() {
+function deleteUser(event) {
+
+    var deleteTask = jQuery(event.target);
+    var theIndex = deleteTask.attr("id");
+    var theId = users[theIndex]._id;
+    console.log(theIndex);
+
+    userService.deleteUser(theId)
+            .then (function (actualUser) {
+                users.push(actualUser)
+                renderUsers(users)
+
+            })
 
 }
 function selectUser() {
@@ -44,8 +56,8 @@ function renderUsers(users) {
                     <td class="wbdv-role">${user.role}</td>
                     <td class="wbdv-actions">
                         <span class="pull-right">
-                            <button>
-                                <i class="fa-2x fa fa-times wbdv-remove"></i>
+                            <button id="${i}">
+                                <i class="fa-2x fa fa-times wbdv-remove" id="${i}"></i>
                             </button>
 
                             <button>
@@ -56,6 +68,9 @@ function renderUsers(users) {
                 </tr>
         `)
     }
+
+    jQuery(".wbdv-remove")
+        .click(deleteUser)
 
 
 
@@ -76,6 +91,8 @@ function main() {
 
     $createBtn = $(".wbdv-create-user");
 
+    $removeBtn = $("wbdv-remove")
+
     theTableBody = jQuery("tbody")
 
 
@@ -93,9 +110,11 @@ function main() {
 
         // WILL remove the filed values afterwards
 
-    }
+    })
 
-    )
+    //$removeBtn.click(deleteUser);
+
+
 
     userService.findAllUsers()
         .then(function (actualUsersFromServer) {
