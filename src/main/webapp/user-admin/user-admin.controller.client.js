@@ -6,10 +6,10 @@ var userService = new AdminUserServiceClient();
 var users = [];
 
 
-function createUser() {
+function createUser(user) {
 
     userService.createUser(user)
-        .then (function actualUser {
+        .then (function (actualUser) {
             users.push(actualUser)
             renderUsers(users)
 
@@ -32,8 +32,8 @@ function renderUsers(users) {
 
     theTableBody.empty();
 
-    for(var i = 0; i < users.length(); i++) {
-        var user = users[$i]
+    for(var i = 0; i < users.length; i++) {
+        var user = users[i]
 
         theTableBody.prepend(`
                 <tr class="wbdv-template wbdv-user wbdv-hidden">
@@ -96,6 +96,12 @@ function main() {
     }
 
     )
+
+    userService.findAllUsers()
+        .then(function (actualUsersFromServer) {
+          users = actualUsersFromServer
+          renderUsers(users)
+        })
 
 }
 
