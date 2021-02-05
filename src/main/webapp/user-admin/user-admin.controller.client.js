@@ -30,6 +30,25 @@ function findUserById() { } // optional - might not need this
 
 function main() {
 
+    $createBtn = $(".wbdv-create");
+
+
+
+    $createBtn.click(() => {
+
+        createUser({
+            username:
+            password:
+            firstname:
+            lastname:
+            role:
+
+        })
+
+    }
+
+    )
+
 }
 
 jQuery(main)
