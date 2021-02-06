@@ -3,6 +3,8 @@ var $removeBtn, $editBtn, $createBtn;
 var $userRowTemplate, $tbody;
 var userService = new AdminUserServiceClient();
 
+var selectedUser = null;
+
 var users = [];
 
 
@@ -36,7 +38,15 @@ function selectUser(event) {
 
     var editTask = jQuery(event.target);
     var theIndex = editTask.attr("id");
-    
+    //console.log(theIndex)
+    selectedUser = users.find(user => user._id === theIndex)
+
+    $userNameFld.val(selectedUser.username);
+    $passwordFld.val(selectedUser.password);
+    $firstNameFld.val(selectedUser.firstname);
+    $lastNameFld.val(selectedUser.lastname);
+    $roleFld.val(selectedUser.role);
+
 
 }
 
@@ -65,7 +75,7 @@ function renderUsers(users) {
                             </button>
 
                             <button>
-                                <i class="fa-2x fa fa-pencil wbdv-edit" id="${i}"></i>
+                                <i class="fa-2x fa fa-pencil wbdv-edit" id="${user._id}"></i>
                             </button>
                         </span>
                     </td>
