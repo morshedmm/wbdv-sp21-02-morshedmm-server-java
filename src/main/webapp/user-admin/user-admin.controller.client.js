@@ -109,6 +109,11 @@ function main() {
         })
 
         // WILL remove the filed values afterwards
+        $userNameFld.val("");
+        $passwordFld.val("");
+        $firstNameFld.val("");
+        $lastNameFld.val("");
+
 
     })
 
