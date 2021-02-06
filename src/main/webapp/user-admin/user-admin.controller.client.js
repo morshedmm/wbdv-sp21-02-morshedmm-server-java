@@ -64,6 +64,13 @@ function updateUser() {
          users[index] = selectedUser
          renderUsers(users)
     })
+
+    // WILL remove the filled values afterwards
+         $userNameFld.val("");
+         $passwordFld.val("");
+         $firstNameFld.val("");
+         $lastNameFld.val("");
+         $roleFld.prop('selectedIndex',0);
 }
 
 function renderUsers(users) {
@@ -139,11 +146,12 @@ function main() {
 
         })
 
-        // WILL remove the filed values afterwards
+        // WILL remove the filled values afterwards
         $userNameFld.val("");
         $passwordFld.val("");
         $firstNameFld.val("");
         $lastNameFld.val("");
+        $roleFld.prop('selectedIndex',0);
 
 
     })
