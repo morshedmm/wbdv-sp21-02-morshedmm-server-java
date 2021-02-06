@@ -52,6 +52,18 @@ function selectUser(event) {
 
 function updateUser() {
 
+    selectedUser.username = $userNameFld.val();
+    selectedUser.password = $passwordFld.val();
+    selectedUser.firstname = $firstNameFld.val();
+    selectedUser.lastname = $lastNameFld.val();
+    selectedUser.role = $roleFld.val();
+
+    userService.updateUser(selectedUser._id, selectedUser)
+    .then (function(status) {
+         var index = users.findIndex(user => user._id === selecteduser._id)
+         users[index] = selectedUser
+         renderUsers(users)
+    })
 }
 
 function renderUsers(users) {
@@ -110,6 +122,8 @@ function main() {
 
     $removeBtn = $("wbdv-remove")
 
+    $updateBtn = $("wbdv-update");
+
     theTableBody = jQuery("tbody")
 
 
@@ -133,6 +147,8 @@ function main() {
 
 
     })
+
+    $updateBtn.click(updateUser);
 
     //$removeBtn.click(deleteUser);
 
