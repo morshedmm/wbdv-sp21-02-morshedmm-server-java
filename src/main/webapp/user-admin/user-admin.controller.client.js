@@ -32,7 +32,11 @@ function deleteUser(event) {
             })
 
 }
-function selectUser() {
+function selectUser(event) {
+
+    var editTask = jQuery(event.target);
+    var theIndex = editTask.attr("id");
+    
 
 }
 
@@ -61,7 +65,7 @@ function renderUsers(users) {
                             </button>
 
                             <button>
-                                <i class="fa-2x fa fa-pencil wbdv-edit"></i>
+                                <i class="fa-2x fa fa-pencil wbdv-edit" id="${i}"></i>
                             </button>
                         </span>
                     </td>
@@ -71,6 +75,9 @@ function renderUsers(users) {
 
     jQuery(".wbdv-remove")
         .click(deleteUser)
+
+    jQuery(".wbdv-edit")
+        .click(selectUser)
 
 
 
