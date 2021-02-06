@@ -60,7 +60,7 @@ function updateUser() {
 
     userService.updateUser(selectedUser._id, selectedUser)
     .then (function(status) {
-         var index = users.findIndex(user => user._id === selecteduser._id)
+         var index = users.findIndex(user => user._id === selectedUser._id)
          users[index] = selectedUser
          renderUsers(users)
     })
@@ -120,9 +120,9 @@ function main() {
 
     $createBtn = $(".wbdv-create-user");
 
-    $removeBtn = $("wbdv-remove")
+    $removeBtn = $(".wbdv-remove")
 
-    $updateBtn = $("wbdv-update");
+    $updateBtn = $(".wbdv-update");
 
     theTableBody = jQuery("tbody")
 
