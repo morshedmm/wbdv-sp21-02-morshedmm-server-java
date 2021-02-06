@@ -87,8 +87,9 @@ function renderUsers(users) {
                     <td class="wbdv-first-name">${user.firstname}</td>
                     <td class="wbdv-last-name">${user.lastname}</td>
                     <td class="wbdv-role">${user.role}</td>
-                    <td class="wbdv-actions">
+                    <td class="wbdv-align wbdv-actions">
                         <span class="pull-right">
+
                             <button id="${i}">
                                 <i class="fa-2x fa fa-times wbdv-remove" id="${i}"></i>
                             </button>

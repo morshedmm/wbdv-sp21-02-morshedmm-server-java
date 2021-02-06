@@ -1,3 +1,7 @@
 .wbdv-nowrap {
     white-space: nowrap;
 }
+
+.wbdv-align {
+    text-align: right;
+}
