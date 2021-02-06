@@ -25,8 +25,8 @@ function deleteUser(event) {
     console.log(theIndex);
 
     userService.deleteUser(theId)
-            .then (function (actualUser) {
-                users.push(actualUser)
+            .then (function (status) {
+                users.splice(theIndex, 1)
                 renderUsers(users)
 
             })
