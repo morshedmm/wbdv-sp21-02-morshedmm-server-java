@@ -1,6 +1,5 @@
 
 var $removeBtn, $editBtn, $createBtn;
-var $userRowTemplate, $tbody;
 var userService = new AdminUserServiceClient();
 
 var selectedUser = null;
