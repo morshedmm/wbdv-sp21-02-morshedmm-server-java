@@ -38,7 +38,6 @@ function selectUser(event) {
 
     var editTask = jQuery(event.target);
     var theIndex = editTask.attr("id");
-    //console.log(theIndex)
     selectedUser = users.find(user => user._id === theIndex)
 
     $userNameFld.val(selectedUser.username);
@@ -79,7 +78,7 @@ function renderUsers(users) {
 
     for(var i = 0; i < users.length; i++) {
         var user = users[i]
-        //prepend
+        //Need to append instead of prepend to maintein the order of entries
         theTableBody.append(`
                 <tr class="wbdv-template wbdv-user wbdv-hidden">
                     <td class="wbdv-username wbdv-align-center">${user.username}</td>
@@ -158,8 +157,6 @@ function main() {
     })
 
     $updateBtn.click(updateUser);
-
-    //$removeBtn.click(deleteUser);
 
 
     userService.findAllUsers()
