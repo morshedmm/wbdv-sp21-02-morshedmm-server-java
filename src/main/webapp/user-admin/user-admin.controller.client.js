@@ -6,6 +6,14 @@ var selectedUser = null;
 
 var users = [];
 
+function clearForm() {
+    $userNameFld.val("");
+    $passwordFld.val("");
+    $firstNameFld.val("");
+    $lastNameFld.val("");
+    $roleFld.prop('selectedIndex',0);
+}
+
 
 function createUser(user) {
 
@@ -23,7 +31,7 @@ function deleteUser(event) {
     var deleteTask = jQuery(event.target);
     var theIndex = deleteTask.attr("id");
     var theId = users[theIndex]._id;
-    console.log(theIndex);
+
 
     userService.deleteUser(theId)
             .then (function (status) {
@@ -64,11 +72,7 @@ function updateUser() {
     })
 
     // WILL remove the filled values afterwards
-         $userNameFld.val("");
-         $passwordFld.val("");
-         $firstNameFld.val("");
-         $lastNameFld.val("");
-         $roleFld.prop('selectedIndex',0);
+        clearForm();
 }
 
 function renderUsers(users) {
@@ -146,11 +150,7 @@ function main() {
         })
 
         // WILL remove the filled values afterwards
-        $userNameFld.val("");
-        $passwordFld.val("");
-        $firstNameFld.val("");
-        $lastNameFld.val("");
-        $roleFld.prop('selectedIndex',0);
+        clearForm();
 
 
     })
