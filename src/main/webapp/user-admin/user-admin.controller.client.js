@@ -82,11 +82,11 @@ function renderUsers(users) {
         //prepend
         theTableBody.append(`
                 <tr class="wbdv-template wbdv-user wbdv-hidden">
-                    <td class="wbdv-username">${user.username}</td>
+                    <td class="wbdv-username wbdv-align-center">${user.username}</td>
                     <td>&nbsp;</td>
-                    <td class="wbdv-first-name">${user.firstname}</td>
-                    <td class="wbdv-last-name">${user.lastname}</td>
-                    <td class="wbdv-role">${user.role}</td>
+                    <td class="wbdv-first-name wbdv-align-center">${user.firstname}</td>
+                    <td class="wbdv-last-name wbdv-align-center">${user.lastname}</td>
+                    <td class="wbdv-role wbdv-align-center">${user.role}</td>
                     <td class="wbdv-align wbdv-actions">
                         <span class="pull-right">
 
