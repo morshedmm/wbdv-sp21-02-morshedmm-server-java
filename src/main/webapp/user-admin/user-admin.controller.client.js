@@ -162,7 +162,6 @@ function main() {
     //$removeBtn.click(deleteUser);
 
 
-
     userService.findAllUsers()
         .then(function (actualUsersFromServer) {
           users = actualUsersFromServer
