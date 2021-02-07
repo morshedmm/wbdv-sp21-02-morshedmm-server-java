@@ -1,6 +1,6 @@
 
 function AdminUserServiceClient() {
-    this.createUser = createUser;
+        this.createUser = createUser;
         this.findAllUsers = findAllUsers;
         this.findUserById = findUserById;
         this.deleteUser = deleteUser;
