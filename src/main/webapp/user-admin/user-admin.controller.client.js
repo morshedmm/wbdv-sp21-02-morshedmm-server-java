@@ -1,4 +1,6 @@
 
+(function () {
+
 var $removeBtn, $editBtn, $createBtn;
 var userService = new AdminUserServiceClient();
 
@@ -168,3 +170,4 @@ function main() {
 
 jQuery(main)
 
+})();
