@@ -83,7 +83,7 @@ function renderUsers(users) {
 
     for(var i = 0; i < users.length; i++) {
         var user = users[i]
-        //Need to append instead of prepend to maintein the order of entries
+        //Need to append instead of prepend to maintain the order of entries
         theTableBody.append(`
                 <tr class="wbdv-template wbdv-user wbdv-hidden">
                     <td class="wbdv-username wbdv-align-center">${user.username}</td>
@@ -94,11 +94,11 @@ function renderUsers(users) {
                     <td class="wbdv-align wbdv-actions">
                         <span class="pull-right">
 
-                            <button id="${i}">
+                            <button id="${i}" title="DELETE">
                                 <i class="fa-2x fa fa-times wbdv-remove" id="${i}"></i>
                             </button>
 
-                            <button>
+                            <button title="EDIT">
                                 <i class="fa-2x fa fa-pencil wbdv-edit" id="${user._id}"></i>
                             </button>
                         </span>
