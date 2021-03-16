@@ -1,7 +1,5 @@
 package com.example.wbdvsp2102morshedmmserverjava.controllers;
 
-
-
 import com.example.wbdvsp2102morshedmmserverjava.models.Widget;
 import com.example.wbdvsp2102morshedmmserverjava.services.WidgetService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,5 +32,18 @@ public class WidgetController {
             @PathVariable("tid") String topicId
     ) {
         return service.findWidgetsForTopic(topicId);
+    }
+
+    @DeleteMapping("/api/widgets/{wid}")
+    public Integer deleteWidget(
+            @PathVariable("wid") Long id) {
+        return service.deleteWidget(id);
+    }
+
+    @PutMapping("/api/widgets/{wid}")
+    public Integer updateWidget(
+            @PathVariable("wid") Long id,
+            @RequestBody Widget widget) {
+        return service.updateWidget(id, widget);
     }
 }
