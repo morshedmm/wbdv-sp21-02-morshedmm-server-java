@@ -18,6 +18,46 @@ public class Widget {
     private Integer height;
     private boolean ordered;
     private String src;
+    private String name;
+    private String cssClass;
+    private String style;
+    private String value;
+
+    public String getStyle() {
+        return style;
+    }
+
+    public void setStyle(String style) {
+        this.style = style;
+    }
+
+    public String getValue() {
+        return value;
+    }
+
+    public void setValue(String value) {
+        this.value = value;
+    }
+
+    public String getCssClass() {
+        return cssClass;
+    }
+
+    public void setCssClass(String cssClass) {
+        this.cssClass = cssClass;
+    }
+
+    public void setWidth(Integer width) {
+        this.width = width;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public boolean isOrdered() {
         return ordered;

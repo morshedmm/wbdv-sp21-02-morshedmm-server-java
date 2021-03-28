@@ -101,6 +101,9 @@ public class WidgetService {
         Widget originalWidget = findWidgetById(id);
 
         originalWidget.setText(newWidget.getText());
+        originalWidget.setType(newWidget.getType());
+        originalWidget.setHeight(newWidget.getHeight());
+        originalWidget.setSize(newWidget.getSize());
         //originalWidget.setSrc(newWidget.getSrc());
 
         repository.save(originalWidget);
