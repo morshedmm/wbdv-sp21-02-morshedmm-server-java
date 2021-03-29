@@ -22,6 +22,15 @@ public class Widget {
     private String cssClass;
     private String style;
     private String value;
+    private String url;
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
 
     public String getStyle() {
         return style;
@@ -65,6 +74,10 @@ public class Widget {
 
     public void setOrdered(boolean ordered) {
         this.ordered = ordered;
+    }
+
+    public boolean getOrdered() {
+        return ordered;
     }
 
     public String getSrc() {
@@ -131,12 +144,14 @@ public class Widget {
         this.text = text;
     }
 
-    public Widget(Long id, String topicIc, String type, Integer size, String text) {
+    public Widget(Long id, String topicIc, String type, Integer size, String text, boolean ordered, String url) {
         this.id = id;
         this.topicIc = topicIc;
         this.type = type;
         this.size = size;
         this.text = text;
+        this.ordered = ordered;
+        this.url = url;
     }
 
     public Widget() {
